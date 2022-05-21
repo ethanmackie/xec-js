@@ -1,14 +1,10 @@
 /*
-  This is the primary library file for bch-js. This file combines all the other
-  libraries in order to create the BCHJS class.
-
-  The primary server used has switched to fullstack.cash. Go there to sign up
-  for an account that gives you increased rate limits.
+  This is the primary library file for xec-js. This file combines all the other
+  libraries in order to create the XECJS class.
 */
 
-// bch-api mainnet.
-const DEFAULT_REST_API = 'https://api.fullstack.cash/v5/'
-// const DEFAULT_REST_API = "http://localhost:3000/v5/"
+// xec-api mainnet.
+const DEFAULT_REST_API = 'https://rest.kingbch.com/v4/'
 
 // local deps
 const BitcoinCash = require('./bitcoincash')
@@ -38,7 +34,7 @@ const Ecash = require('./ecash')
 const Electrumx = require('./electrumx')
 const PsfSlpIndexer = require('./psf-slp-indexer')
 
-class BCHJS {
+class XECJS {
   constructor (config) {
     // Try to retrieve the REST API URL from different sources.
     if (config && config.restURL && config.restURL !== '') {
@@ -120,4 +116,4 @@ class BCHJS {
   }
 }
 
-module.exports = BCHJS
+module.exports = XECJS

@@ -46,7 +46,7 @@ class ElectrumX {
    * @apiExample Example usage:
    *    (async () => {
    *   try {
-   *     let utxo = await bchjs.Electrumx.utxo('bitcoincash:qqh793x9au6ehvh7r2zflzguanlme760wuzehgzjh9');
+   *     let utxo = await xecjs.Electrumx.utxo('bitcoincash:qqh793x9au6ehvh7r2zflzguanlme760wuzehgzjh9');
    *     console.log(utxo);
    *   } catch(error) {
    *    console.error(error)
@@ -67,7 +67,7 @@ class ElectrumX {
    *
    * (async () => {
    *   try {
-   *     let utxo = await bchjs.Electrumx.utxo(['bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
+   *     let utxo = await xecjs.Electrumx.utxo(['bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
    *     console.log(utxo);
    *   } catch(error) {
    *    console.error(error)
@@ -141,7 +141,7 @@ class ElectrumX {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let balance = await bchjs.Electrumx.balance('bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf');
+   *     let balance = await xecjs.Electrumx.balance('bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf');
    *     console.log(balance);
    *   } catch(error) {
    *    console.error(error)
@@ -158,7 +158,7 @@ class ElectrumX {
    *
    * (async () => {
    *   try {
-   *     let balance = await bchjs.Electrumx.balance(['bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
+   *     let balance = await xecjs.Electrumx.balance(['bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
    *     console.log(balance);
    *   } catch(error) {
    *    console.error(error)
@@ -225,7 +225,7 @@ class ElectrumX {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let transactions = await bchjs.Electrumx.transactions('bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v');
+   *     let transactions = await xecjs.Electrumx.transactions('bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v');
    *     console.log(utxo);
    *   } catch(error) {
    *    console.error(error)
@@ -248,7 +248,7 @@ class ElectrumX {
    *
    * (async () => {
    *   try {
-   *     let transactions = await bchjs.Electrumx.transactions(['bitcoincash:qrl2nlsaayk6ekxn80pq0ks32dya8xfclyktem2mqj', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
+   *     let transactions = await xecjs.Electrumx.transactions(['bitcoincash:qrl2nlsaayk6ekxn80pq0ks32dya8xfclyktem2mqj', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
    *     console.log(utxo);
    *   } catch(error) {
    *    console.error(error)
@@ -324,7 +324,7 @@ class ElectrumX {
    * @apiExample Example usage:
    *    (async () => {
    *   try {
-   *     let mempool = await bchjs.Electrumx.unconfirmed('bitcoincash:qqh793x9au6ehvh7r2zflzguanlme760wuzehgzjh9');
+   *     let mempool = await xecjs.Electrumx.unconfirmed('bitcoincash:qqh793x9au6ehvh7r2zflzguanlme760wuzehgzjh9');
    *     console.log(mempool);
    *   } catch(error) {
    *    console.error(error)
@@ -344,7 +344,7 @@ class ElectrumX {
    *
    * (async () => {
    *   try {
-   *     let mempool = await bchjs.Electrumx.unconfirmed(['bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
+   *     let mempool = await xecjs.Electrumx.unconfirmed(['bitcoincash:qrdka2205f4hyukutc2g0s6lykperc8nsu5u2ddpqf', 'bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v']);
    *     console.log(mempool);
    *   } catch(error) {
    *    console.error(error)
@@ -416,7 +416,7 @@ class ElectrumX {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let headers = await bchjs.Electrumx.blockHeaders(42);
+   *     let headers = await xecjs.Electrumx.blockHeaders(42);
    *     console.log(headers);
    *   } catch(error) {
    *    console.error(error)
@@ -433,7 +433,7 @@ class ElectrumX {
    *
    * (async () => {
    *   try {
-   *     let headers = await bchjs.Electrumx.blockHeaders(42, 1);
+   *     let headers = await xecjs.Electrumx.blockHeaders(42, 1);
    *     console.log(headers);
    *   } catch(error) {
    *    console.error(error)
@@ -476,7 +476,7 @@ class ElectrumX {
    * @apiExample Example usage:
    *    (async () => {
    *   try {
-   *     let result = await bchjs.Electrumx.txData('4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251')
+   *     let result = await xecjs.Electrumx.txData('4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251')
    *     console.log(result);
    *   } catch(error) {
    *    console.error(error)
@@ -508,7 +508,7 @@ class ElectrumX {
    *
    *    (async () => {
    *   try {
-   *     let result = await bchjs.Electrumx.txData(['4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251', '4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251'])
+   *     let result = await xecjs.Electrumx.txData(['4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251', '4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251'])
    *     console.log(result);
    *   } catch(error) {
    *    console.error(error)
@@ -574,7 +574,7 @@ class ElectrumX {
    *    (async () => {
    *   try {
    *     const txHex = "020000000265d13ef402840c8a51f39779afb7ae4d49e4b0a3c24a3d0e7742038f2c679667010000006441dd1dd72770cadede1a7fd0363574846c48468a398ddfa41a9677c74cac8d2652b682743725a3b08c6c2021a629011e11a264d9036e9d5311e35b5f4937ca7b4e4121020797d8fd4d2fa6fd7cdeabe2526bfea2b90525d6e8ad506ec4ee3c53885aa309ffffffff65d13ef402840c8a51f39779afb7ae4d49e4b0a3c24a3d0e7742038f2c679667000000006441347d7f218c11c04487c1ad8baac28928fb10e5054cd4494b94d078cfa04ccf68e064fb188127ff656c0b98e9ce87f036d183925d0d0860605877d61e90375f774121028a53f95eb631b460854fc836b2e5d31cad16364b4dc3d970babfbdcc3f2e4954ffffffff035ac355000000000017a914189ce02e332548f4804bac65cba68202c9dbf822878dfd0800000000001976a914285bb350881b21ac89724c6fb6dc914d096cd53b88acf9ef3100000000001976a91445f1f1c4a9b9419a5088a3e9c24a293d7a150e6488ac00000000"
-   *     let result = await bchjs.Electrumx.broadcast(txHex)
+   *     let result = await xecjs.Electrumx.broadcast(txHex)
    *     console.log(result);
    *   } catch(error) {
    *    console.error(error)
@@ -619,8 +619,8 @@ class ElectrumX {
    *
    * @apiExample Example usage:
    *    (async () => {
-   *      const txs = await bchjs.Electrumx.transactions('bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v')
-   *      const sortedTxs = bchjs.Electrumx.sortConfTxs(txs.transactions, 'ASCENDING')
+   *      const txs = await xecjs.Electrumx.transactions('bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v')
+   *      const sortedTxs = xecjs.Electrumx.sortConfTxs(txs.transactions, 'ASCENDING')
    *      console.log(sortedTxs)
    *    })()
    *
@@ -677,8 +677,8 @@ class ElectrumX {
    *
    * @apiExample Example usage:
    *    (async () => {
-   *      const txs = await bchjs.Electrumx.transactions('bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v')
-   *      const sortedTxs = await bchjs.Electrumx.sortAllTxs(txs.transactions, 'ASCENDING')
+   *      const txs = await xecjs.Electrumx.transactions('bitcoincash:qpdh9s677ya8tnx7zdhfrn8qfyvy22wj4qa7nwqa5v')
+   *      const sortedTxs = await xecjs.Electrumx.sortAllTxs(txs.transactions, 'ASCENDING')
    *      console.log(sortedTxs)
    *    })()
    *

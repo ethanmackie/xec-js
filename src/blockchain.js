@@ -42,7 +42,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getBestBlockHash = await bchjs.Blockchain.getBestBlockHash();
+   * let getBestBlockHash = await xecjs.Blockchain.getBestBlockHash();
    * console.log(getBestBlockHash);
    * } catch(error) {
    * console.error(error)
@@ -73,7 +73,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getBlock = await bchjs.Blockchain.getBlock("00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09");
+   * let getBlock = await xecjs.Blockchain.getBlock("00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09");
    * console.log(getBlock);
    * } catch(error) {
    * console.error(error)
@@ -131,7 +131,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getBlockchainInfo = await bchjs.Blockchain.getBlockchainInfo();
+   * let getBlockchainInfo = await xecjs.Blockchain.getBlockchainInfo();
    * console.log(getBlockchainInfo);
    * } catch(error) {
    * console.error(error)
@@ -181,7 +181,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getBlockCount = await bchjs.Blockchain.getBlockCount();
+   * let getBlockCount = await xecjs.Blockchain.getBlockCount();
    * console.log(getBlockCount);
    * } catch(error) {
    * console.error(error)
@@ -212,7 +212,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getBlockHash = await bchjs.Blockchain.getBlockHash([0]);
+   * let getBlockHash = await xecjs.Blockchain.getBlockHash([0]);
    * console.log(getBlockHash);
    * } catch(error) {
    * console.error(error)
@@ -245,7 +245,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getBlockHeader = await bchjs.Blockchain.getBlockHeader(["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"]);
+   * let getBlockHeader = await xecjs.Blockchain.getBlockHeader(["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"]);
    * console.log(getBlockHeader);
    * } catch(error) {
    * console.error(error)
@@ -310,7 +310,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getChainTips = await bchjs.Blockchain.getChainTips();
+   * let getChainTips = await xecjs.Blockchain.getChainTips();
    * console.log(getChainTips);
    * } catch(error) {
    * console.error(error)
@@ -353,7 +353,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getDifficulty = await bchjs.Blockchain.getDifficulty();
+   * let getDifficulty = await xecjs.Blockchain.getDifficulty();
    * console.log(getDifficulty);
    * } catch(error) {
    * console.error(error)
@@ -416,7 +416,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getMempoolEntry = await bchjs.Blockchain.getMempoolEntry("fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33");
+   * let getMempoolEntry = await xecjs.Blockchain.getMempoolEntry("fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33");
    * console.log(getMempoolEntry);
    * } catch(error) {
    * console.error(error)
@@ -442,7 +442,7 @@ class Blockchain {
    *
    * (async () => {
    * try {
-   * let getMempoolEntry = await bchjs.Blockchain.getMempoolEntry([
+   * let getMempoolEntry = await xecjs.Blockchain.getMempoolEntry([
    *   "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33",
    *   "defea04c38ee00cf73ad402984714ed22dc0dd99b2ae5cb50d791d94343ba79b"
    *   ]);
@@ -528,7 +528,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getMempoolInfo = await bchjs.Blockchain.getMempoolInfo();
+   * let getMempoolInfo = await xecjs.Blockchain.getMempoolInfo();
    * console.log(getMempoolInfo);
    * } catch(error) {
    * console.error(error)
@@ -564,7 +564,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getRawMempool = await bchjs.Blockchain.getRawMempool(true);
+   * let getRawMempool = await xecjs.Blockchain.getRawMempool(true);
    * console.log(getRawMempool);
    * } catch(error) {
    * console.error(error)
@@ -611,7 +611,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getTxOut = await bchjs.Blockchain.getTxOut("e25682caafc7000645d59f4c11d8d594b2943979b9d8fafb9f946e2b35c21b7e", 1);
+   * let getTxOut = await xecjs.Blockchain.getTxOut("e25682caafc7000645d59f4c11d8d594b2943979b9d8fafb9f946e2b35c21b7e", 1);
    * console.log(getTxOut);
    * } catch(error) {
    * console.error(error)
@@ -665,7 +665,7 @@ class Blockchain {
    * @apiExample Example usage:
    * (async () => {
    * try {
-   * let getTxOutProof = await bchjs.Blockchain.getTxOutProof("e25682caafc7000645d59f4c11d8d594b2943979b9d8fafb9f946e2b35c21b7e");
+   * let getTxOutProof = await xecjs.Blockchain.getTxOutProof("e25682caafc7000645d59f4c11d8d594b2943979b9d8fafb9f946e2b35c21b7e");
    * console.log(getTxOutProof);
    * } catch(error) {
    * console.error(error)
@@ -676,7 +676,7 @@ class Blockchain {
    *
    * (async () => {
    * try {
-   * let getTxOutProof = await bchjs.Blockchain.getTxOutProof([
+   * let getTxOutProof = await xecjs.Blockchain.getTxOutProof([
    *   "e25682caafc7000645d59f4c11d8d594b2943979b9d8fafb9f946e2b35c21b7e",
    *   "d16662463fd98eb96c8f6898d58a4461ac3d0120f4d0aea601d72b37759f261c"
    * ]);
@@ -772,7 +772,7 @@ class Blockchain {
    * (async () => {
    * try {
    * const proof = "0000002086a4a3161f9ba2174883ec0b93acceac3b2f37b36ed1f90000000000000000009cb02406d1094ecf3e0b4c0ca7c585125e721147c39daf6b48c90b512741e13a12333e5cb38705180f441d8c7100000008fee9b60f1edb57e5712839186277ed39e0a004a32be9096ee47472efde8eae62f789f9d7a9f59d0ea7093dea1e0c65ff0b953f1d8cf3d47f92e732ca0295f603c272d5f4a63509f7a887f2549d78af7444aa0ecbb4f66d9cbe13bc6a89f59e05a199df8325d490818ffefe6b6321d32d7496a68580459836c0183f89082fc1b491cc91b23ecdcaa4c347bf599a62904d61f1c15b400ebbd5c90149010c139d9c1e31b774b796977393a238080ab477e1d240d0c4f155d36f519668f49bae6bd8cd5b8e40522edf76faa09cca6188d83ff13af6967cc6a569d1a5e9aeb1fdb7f531ddd2d0cbb81879741d5f38166ac1932136264366a4065cc96a42e41f96294f02df01"
-   * let verifyTxOutProof = await bchjs.Blockchain.verifyTxOutProof(proof);
+   * let verifyTxOutProof = await xecjs.Blockchain.verifyTxOutProof(proof);
    * console.log(verifyTxOutProof);
    * } catch(error) {
    * console.error(error)
@@ -786,7 +786,7 @@ class Blockchain {
    * (async () => {
    * try {
    * const proof = "0000002086a4a3161f9ba2174883ec0b93acceac3b2f37b36ed1f90000000000000000009cb02406d1094ecf3e0b4c0ca7c585125e721147c39daf6b48c90b512741e13a12333e5cb38705180f441d8c7100000008fee9b60f1edb57e5712839186277ed39e0a004a32be9096ee47472efde8eae62f789f9d7a9f59d0ea7093dea1e0c65ff0b953f1d8cf3d47f92e732ca0295f603c272d5f4a63509f7a887f2549d78af7444aa0ecbb4f66d9cbe13bc6a89f59e05a199df8325d490818ffefe6b6321d32d7496a68580459836c0183f89082fc1b491cc91b23ecdcaa4c347bf599a62904d61f1c15b400ebbd5c90149010c139d9c1e31b774b796977393a238080ab477e1d240d0c4f155d36f519668f49bae6bd8cd5b8e40522edf76faa09cca6188d83ff13af6967cc6a569d1a5e9aeb1fdb7f531ddd2d0cbb81879741d5f38166ac1932136264366a4065cc96a42e41f96294f02df01"
-   * let verifyTxOutProof = await bchjs.Blockchain.verifyTxOutProof([proof, proof]);
+   * let verifyTxOutProof = await xecjs.Blockchain.verifyTxOutProof([proof, proof]);
    * console.log(verifyTxOutProof);
    * } catch(error) {
    * console.error(error)

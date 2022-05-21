@@ -53,7 +53,7 @@ class PsfSlpIndexer {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let status = await bchjs.PsfSlpIndexer.status()
+   *     let status = await xecjs.PsfSlpIndexer.status()
    *     console.log(status)
    *   } catch(error) {
    *    console.error(error)
@@ -91,7 +91,7 @@ class PsfSlpIndexer {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let balance = await bchjs.PsfSlpIndexer.balance('bitcoincash:qzmd5vxgh9m22m6fgvm57yd6kjnjl9qnwywsf3583n')
+   *     let balance = await xecjs.PsfSlpIndexer.balance('bitcoincash:qzmd5vxgh9m22m6fgvm57yd6kjnjl9qnwywsf3583n')
    *     console.log(balance)
    *   } catch(error) {
    *    console.error(error)
@@ -161,7 +161,7 @@ class PsfSlpIndexer {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let tokenStats = await bchjs.PsfSlpIndexer.tokenStats('a4fb5c2da1aa064e25018a43f9165040071d9e984ba190c222a7f59053af84b2', true)
+   *     let tokenStats = await xecjs.PsfSlpIndexer.tokenStats('a4fb5c2da1aa064e25018a43f9165040071d9e984ba190c222a7f59053af84b2', true)
    *     console.log(tokenStats)
    *   } catch(error) {
    *    console.error(error)
@@ -223,7 +223,7 @@ class PsfSlpIndexer {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let txData = await bchjs.PsfSlpIndexer.tx('a4fb5c2da1aa064e25018a43f9165040071d9e984ba190c222a7f59053af84b2')
+   *     let txData = await xecjs.PsfSlpIndexer.tx('a4fb5c2da1aa064e25018a43f9165040071d9e984ba190c222a7f59053af84b2')
    *     console.log(txData)
    *   } catch(error) {
    *    console.error(error)

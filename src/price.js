@@ -55,7 +55,7 @@ class Price {
    * @apiExample Example usage:
    *(async () => {
    *  try {
-   *    let current = await bchjs.Price.getUsd();
+   *    let current = await xecjs.Price.getUsd();
    *    console.log(current);
    *  } catch(err) {
    *   console.error(err)
@@ -91,7 +91,7 @@ class Price {
    * @apiExample Example usage:
    *(async () => {
    *  try {
-   *    let current = await bchjs.Price.rates();
+   *    let current = await xecjs.Price.rates();
    *    console.log(current);
    *  } catch(err) {
    *   console.error(err)
@@ -134,7 +134,7 @@ class Price {
    * @apiExample Example usage:
    *(async () => {
    *  try {
-   *    let current = await bchjs.Price.getBchaUsd();
+   *    let current = await xecjs.Price.getBchaUsd();
    *    console.log(current);
    *  } catch(err) {
    *   console.error(err)
@@ -172,7 +172,7 @@ class Price {
    * @apiExample Example usage:
    *(async () => {
    *  try {
-   *    let current = await bchjs.Price.getXecUsd();
+   *    let current = await xecjs.Price.getXecUsd();
    *    console.log(current);
    *  } catch(err) {
    *   console.error(err)
@@ -207,7 +207,7 @@ class Price {
    * @apiExample Example usage:
    *(async () => {
    *  try {
-   *    let current = await bchjs.Price.getBchUsd();
+   *    let current = await xecjs.Price.getBchUsd();
    *    console.log(current);
    *  } catch(err) {
    *   console.error(err)

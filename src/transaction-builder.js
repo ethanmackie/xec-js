@@ -2,9 +2,8 @@ const Bitcoin = require('@psf/bitcoincashjs-lib')
 const coininfo = require('@psf/coininfo')
 const bip66 = require('bip66')
 const bip68 = require('bc-bip68')
-const bchAddr = require('./address')
-const bchjsAddr = new bchAddr()
-const log = console.log
+const XecAddr = require('./address')
+const xecjsAddr = new XecAddr()
 
 class TransactionBuilder {
   static setAddress (address) {
@@ -75,7 +74,7 @@ class TransactionBuilder {
    *
    * @apiExample Example usage:
    *  let originalAmount = 100000;
-   *  let byteCount = bchjs.BitcoinCash.getByteCount({ P2PKH: 1 }, { P2PKH: 1 });
+   *  let byteCount = xecjs.BitcoinCash.getByteCount({ P2PKH: 1 }, { P2PKH: 1 });
    *  // amount to send to receiver. It's the original amount - 1 sat/byte for tx size
    *  let sendAmount = originalAmount - byteCount;
    *  // add output w/ address and amount to send
@@ -83,7 +82,7 @@ class TransactionBuilder {
    */
   addOutput (scriptPubKey, amount) {
     try {
-      const ecashtoCashPubKey = bchjsAddr.ecashtoCashAddress(scriptPubKey)
+      const ecashtoCashPubKey = xecjsAddr.ecashtoCashAddress(scriptPubKey)
       this.transaction.addOutput(
         TransactionBuilder._address.toLegacyAddress(ecashtoCashPubKey),
         amount
@@ -101,7 +100,7 @@ class TransactionBuilder {
    *
    * @apiExample Example usage:
    *  let originalAmount = 100000;
-   *  let byteCount = bchjs.BitcoinCash.getByteCount({ P2PKH: 1 }, { P2PKH: 1 });
+   *  let byteCount = xecjs.BitcoinCash.getByteCount({ P2PKH: 1 }, { P2PKH: 1 });
    *  // amount to send to receiver. It's the original amount - 1 sat/byte for tx size
    *  let sendAmount = originalAmount - byteCount;
    *  // add output w/ address and amount to send
@@ -121,9 +120,9 @@ class TransactionBuilder {
    * @apiExample Example usage:
    *  let originalAmount = 100000;
    *  // node of address which is going to spend utxo
-   *  let hdnode = bchjs.HDNode.fromXPriv("xprvA3eaDg64MwDr72PVGJ7CkvshNAzCDRz7rn98sYrZVAtDSWCAmNGQhEQeCLDcnmcpSkfjhHevXmu4ZL8ZcT9D4vEbG8LpiToZETrHZttw9Yw");
+   *  let hdnode = xecjs.HDNode.fromXPriv("xprvA3eaDg64MwDr72PVGJ7CkvshNAzCDRz7rn98sYrZVAtDSWCAmNGQhEQeCLDcnmcpSkfjhHevXmu4ZL8ZcT9D4vEbG8LpiToZETrHZttw9Yw");
    *  // keypair
-   *  let keyPair = bchjs.HDNode.toKeyPair(hdnode);
+   *  let keyPair = xecjs.HDNode.toKeyPair(hdnode);
    *  // empty redeemScript variable
    *  let redeemScript;
    *  // sign w/ keyPair
@@ -158,7 +157,7 @@ class TransactionBuilder {
    *
    * @apiExample Example usage:
    * // build tx
-   * let tx = bchjs.transactionBuilder.build();
+   * let tx = xecjs.transactionBuilder.build();
    */
   build () {
     if (this.p2shInput === true) return this.tx

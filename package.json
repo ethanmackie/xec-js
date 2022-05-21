@@ -1,13 +1,12 @@
 {
-  "name": "@psf/bch-js",
-  "version": "6.0.0",
-  "description": "A JavaScript library for working with Bitcoin Cash, eCash, and SLP Tokens",
-  "author": "Chris Troutner <chris.troutner@gmail.com>",
+  "name": "xec-js",
+  "version": "0.0.1",
+  "description": "A JavaScript library for working with eCash and eTokens",
+  "author": "Ethan Quintera <ethanmackie1199@gmail.com>",
   "contributors": [
-    "Gabriel Cardona <gabriel@bitcoin.com>",
-    "Stoyan Zhekov <zh@zhware.net>"
+    "Sam Rock <@samrock5000>"
   ],
-  "main": "src/bch-js",
+  "main": "src/xec-js",
   "scripts": {
     "test": "nyc mocha --trace-warnings --unhandled-rejections=strict --timeout 30000 test/unit/",
     "test:integration": "npm run test:integration:bchn",
@@ -27,14 +26,14 @@
     "test:temp4": "export RESTURL=http://localhost:3000/v5/ && mocha --timeout 30000 -g '#decodeOpReturn' test/integration/",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "coverage:report": "nyc --reporter=html mocha --timeout 25000 test/unit/",
-    "docs": "./node_modules/.bin/apidoc -i src/ -o docs",
+    "docs": "apidoc -i src/ -o docs",
     "lint": "standard --env mocha --fix"
   },
   "license": "MIT",
-  "homepage": "https://github.com/Permissionless-Software-Foundation/bch-js",
+  "homepage": "https://github.com/ethanmackie/xec-js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Permissionless-Software-Foundation/bch-js.git"
+    "url": "git+https://github.com/ethanmackie/xec-js.git"
   },
   "dependencies": {
     "@chris.troutner/bip32-utils": "1.0.5",
@@ -83,12 +82,22 @@
     "standard": "^16.0.4"
   },
   "apidoc": {
-    "title": "bch-js",
-    "url": "bchjs."
+    "title": "xec-js",
+    "url": "xec-js."
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ethanmackie/xec-js/issues"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "keywords": [
+    "xec-js"
+  ]
 }

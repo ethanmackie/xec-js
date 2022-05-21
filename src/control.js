@@ -40,7 +40,7 @@ class Control {
    * @apiExample Example usage:
    * (async () => {
    *   try {
-   *     let getInfo = await bchjs.Control.getNetworkInfo();
+   *     let getInfo = await xecjs.Control.getNetworkInfo();
    *     console.log(getInfo);
    *   } catch(error) {
    *    console.error(error)

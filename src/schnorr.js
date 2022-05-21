@@ -42,7 +42,7 @@ class Schnorr {
    * "243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89",
    * "hex"
    * )
-   * const createdSignature = bchjs.Schnorr.sign(privateKey, message)
+   * const createdSignature = xecjs.Schnorr.sign(privateKey, message)
    * console.log("The signature is: " + createdSignature.toString("hex"))
    * // The signature is: 2a298dacae57395a15d0795ddbfd1dcb564da82b0f269bc70a74f8220429ba1d1e51a22ccec35599b8f266912281f8365ffc2d035a230434a1a64dc59f7013fd
    */
@@ -72,7 +72,7 @@ class Schnorr {
    * "hex"
    * )
    * try {
-   * bchjs.Schnorr.verify(publicKey, message, signatureToVerify)
+   * xecjs.Schnorr.verify(publicKey, message, signatureToVerify)
    * console.log("The signature is valid.")
    * } catch (e) {
    * console.error("The signature verification failed: " + e)
@@ -134,7 +134,7 @@ class Schnorr {
    * )
    * ]
    * try {
-   * bchjs.Schnorr.batchVerify(publicKeys, messages, signatures)
+   * xecjs.Schnorr.batchVerify(publicKeys, messages, signatures)
    * console.log("The signatures are valid.")
    * } catch (e) {
    * console.error("The signature verification failed: " + e)
@@ -167,7 +167,7 @@ class Schnorr {
    * "243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89",
    * "hex"
    * )
-   * const aggregatedSignature = bchjs.Schnorr.nonInteractive(
+   * const aggregatedSignature = xecjs.Schnorr.nonInteractive(
    * [privateKey1, privateKey2],
    * message
    * )
@@ -181,9 +181,9 @@ class Schnorr {
    * "03FAC2114C2FBB091527EB7C64ECB11F8021CB45E8E7809D3C0938E4B8C0E5F84B",
    * "hex"
    * )
-   * const X = bchjs.Schnorr.publicKeyCombine([publicKey1, publicKey2])
+   * const X = xecjs.Schnorr.publicKeyCombine([publicKey1, publicKey2])
    * try {
-   * bchjs.Schnorr.verify(X, message, aggregatedSignature)
+   * xecjs.Schnorr.verify(X, message, aggregatedSignature)
    * console.log("The signature is valid.")
    * } catch (e) {
    * console.error("The signature verification failed: " + e)
@@ -219,7 +219,7 @@ class Schnorr {
    *   "hex"
    * )
    * ],
-   * message: bchjs.Schnorr.hash(Buffer.from("muSig is awesome!", "utf8")),
+   * message: xecjs.Schnorr.hash(Buffer.from("muSig is awesome!", "utf8")),
    * pubKeyHash: null,
    * pubKeyCombined: null,
    * commitments: [],
@@ -261,7 +261,7 @@ class Schnorr {
    * // This can be done by every signer individually or by the initializing
    * // party and then be distributed to every participant.
    * // -----------------------------------------------------------------------
-   * publicData.pubKeyHash = bchjs.Schnorr.computeEll(publicData.pubKeys)
+   * publicData.pubKeyHash = xecjs.Schnorr.computeEll(publicData.pubKeys)
    */
   computeEll (publicKeys) {
     return schnorr.muSig.computeEll(publicKeys)
@@ -276,7 +276,7 @@ class Schnorr {
    *
    * @apiExample Example usage:
    * // continued from above
-   * publicData.pubKeyCombined = bchjs.Schnorr.publicKeyCombine(
+   * publicData.pubKeyCombined = xecjs.Schnorr.publicKeyCombine(
    * publicData.pubKeys,
    * publicData.pubKeyHash
    * )
@@ -301,8 +301,8 @@ class Schnorr {
    * // an attacker to extract the secret key!
    * // -----------------------------------------------------------------------
    * signerPrivateData.forEach((data, idx) => {
-   * const sessionId = bchjs.Crypto.randomBytes(32) // must never be reused between sessions!
-   * data.session = bchjs.Schnorr.sessionInitialize(
+   * const sessionId = xecjs.Crypto.randomBytes(32) // must never be reused between sessions!
+   * data.session = xecjs.Schnorr.sessionInitialize(
    * sessionId,
    * data.privateKey,
    * publicData.message,
@@ -357,7 +357,7 @@ class Schnorr {
    * // and keep track of whether the nonce was negated or not. This is needed
    * // for the later steps.
    * // -----------------------------------------------------------------------
-   * publicData.nonceCombined = bchjs.Schnorr.sessionNonceCombine(
+   * publicData.nonceCombined = xecjs.Schnorr.sessionNonceCombine(
    * signerSession,
    * publicData.nonces
    * )
@@ -384,7 +384,7 @@ class Schnorr {
    * // given message.
    * // -----------------------------------------------------------------------
    * signerPrivateData.forEach(data => {
-   * data.session.partialSignature = bchjs.Schnorr.partialSign(
+   * data.session.partialSignature = xecjs.Schnorr.partialSign(
    * data.session,
    * publicData.message,
    * publicData.nonceCombined,
@@ -426,7 +426,7 @@ class Schnorr {
    * // other participants.
    * // -----------------------------------------------------------------------
    * for (let i = 0; i < publicData.pubKeys.length; i++) {
-   * bchjs.Schnorr.partialSignatureVerify(
+   * xecjs.Schnorr.partialSignatureVerify(
    * signerSession,
    * publicData.partialSignatures[i],
    * publicData.nonceCombined,
@@ -468,7 +468,7 @@ class Schnorr {
    * // Finally, the partial signatures can be combined into the full signature
    * // (s, R) that can be verified against combined public key P.
    * // -----------------------------------------------------------------------
-   * publicData.signature = bchjs.Schnorr.partialSignaturesCombine(
+   * publicData.signature = xecjs.Schnorr.partialSignaturesCombine(
    * publicData.nonceCombined,
    * publicData.partialSignatures
    * )
@@ -478,7 +478,7 @@ class Schnorr {
    * // The resulting signature can now be verified as a normal Schnorr
    * // signature (s, R) over the message m and public key P.
    * // -----------------------------------------------------------------------
-   * bchjs.Schnorr.verify(
+   * xecjs.Schnorr.verify(
    * publicData.pubKeyCombined,
    * publicData.message,
    * publicData.signature

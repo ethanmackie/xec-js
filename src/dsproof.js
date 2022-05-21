@@ -48,7 +48,7 @@ class DSProof {
    * (async () => {
    *   try {
    *     const txid = 'ee0df780b58f6f24467605b2589c44c3a50fc849fb8f91b89669a4ae0d86bc7e'
-   *     const result = await bchjs.DSProof.getDSProof(txid)
+   *     const result = await xecjs.DSProof.getDSProof(txid)
    *     console.log(result);
    *   } catch(error) {
    *    console.error(error)

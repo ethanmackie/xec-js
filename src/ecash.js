@@ -12,7 +12,7 @@ class eCash {
    *
    * @apiExample Example usage:
    * // convert 10,704.35 XEC to satoshis:
-   * bchjs.eCash.toSatoshi(10704.35)
+   * xecjs.eCash.toSatoshi(10704.35)
    * // 1070435
    */
   toSatoshi (xec) {
@@ -32,7 +32,7 @@ class eCash {
    *
    * @apiExample Example usage:
    * // convert 1,070,435 satoshis to XEC:
-   * bchjs.eCash.toSatoshi(1070435)
+   * xecjs.eCash.toSatoshi(1070435)
    * // 10704.35
    */
   toXec (sats) {
