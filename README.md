@@ -10,7 +10,7 @@
 ### Quick Links
 
 - [npm Library](https://www.npmjs.com/package/xec-js)
-- [Documentation](https://bchjs.fullstack.cash/) (being)
+- [Documentation](https://ethanmackie.github.io/xec-js-documentation/)
 - [rest.kingbch.com](https://rest.kingbch.com) - The eCash REST API this library talks to by default.
 - [FullStack.cash](https://fullstack.cash) - cloud-based infrastructure for application developers.
 - [Permissionless Software Foundation](https://psfoundation.cash) - The organization that maintains the original library that this is forked from.
@@ -36,10 +36,10 @@ the [xec-api](https://rest.kingbch.com/) REST API. The `restURL` property can be
 ## New eCash Features
 
 - transaction-builder can now directly take in an eCash address as part of adding tx outputs without the need for cash address conversion beforehand
-> See [buildXecTx.js](https://github.com/ethanmackie/xec-js/tree/main/examples/buildXecTx.js) example
+> See [buildXecTx.js](https://github.com/ethanmackie/xec-js/blob/main/examples/buildXecTx.js) example
 
 - Address.toHash160() can now directly take in an eCash address for conversion to a hash160 public key hash
-> See [addrToHash160.js](https://github.com/ethanmackie/xec-js/tree/main/examples/addrToHash160.js) example
+> See [addrToHash160.js](https://github.com/ethanmackie/xec-js/blob/main/examples/addrToHash160.js) example
 
 - Address.toCashAddress() can now directly take in an eCash address for conversion to a cash address
 

@@ -13,9 +13,9 @@ const log = console.log
 // Sample transaction building parameters
 // Your app should be parsing these via utxo and balance -related api calls
 // =============================================================================
-const SEND_ADDR = 'ecash:qpatql05s9jfavnu0tv6lkjjk25n6tmj9gkpyrlwu8'
-const SEND_MNEMONIC = 'human rough army cave bring also stamp tent victory become puzzle seminar'
-const RECV_ADDR = 'ecash:qzvydd4n3lm3xv62cx078nu9rg0e3srmqq0knykfed'
+const SEND_ADDR = 'ecash:qpa....'
+const SEND_MNEMONIC = '...'
+const RECV_ADDR = 'ecash:qzvy....'
 const originalAmount = 50000000
 const satoshisToSend = 1000
 const txid = '8f9dfa294314d70db248dc05fb9703b6e65440354026ebca6b07526f46d6fa2f'
