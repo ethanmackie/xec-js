@@ -2,7 +2,7 @@
     Bare bones XEC native transtion builder example
 */
 
-// xec-js-examples require code from the main bch-js repo
+// import to become relative after npm publication
 const XECJS = require('../src/xec-js')
 
 // Instantiate xec-js based on the network.

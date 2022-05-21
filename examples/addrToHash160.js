@@ -2,7 +2,7 @@
     Convert an eCash address to hash160 public key hash example
 */
 
-// xec-js-examples require code from the main bch-js repo
+// import to become relative after npm publication
 const XECJS = require('../src/xec-js')
 // const ecashaddrjs = require('ecashaddrjs')
 
