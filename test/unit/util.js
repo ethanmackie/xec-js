@@ -1,7 +1,7 @@
 const assert = require('assert')
 const assert2 = require('chai').assert
 const axios = require('axios')
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 const bchjs = new BCHJS()
 const sinon = require('sinon')
 

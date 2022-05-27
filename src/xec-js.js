@@ -8,31 +8,15 @@ const DEFAULT_REST_API = 'https://rest.kingbch.com/v4/'
 
 // local deps
 const BitcoinCash = require('./bitcoincash')
-const Crypto = require('./crypto')
 const Util = require('./util')
-const Blockchain = require('./blockchain')
-const Control = require('./control')
-const Generating = require('./generating')
-const Mining = require('./mining')
-const RawTransactions = require('./raw-transactions')
 const Mnemonic = require('./mnemonic')
 const Address = require('./address')
 const HDNode = require('./hdnode')
 const TransactionBuilder = require('./transaction-builder')
 const ECPair = require('./ecpair')
 const Script = require('./script')
-const Price = require('./price')
-const Schnorr = require('./schnorr')
 const SLP = require('./slp/slp')
-const Encryption = require('./encryption')
-const Utxo = require('./utxo')
-const Transaction = require('./transaction')
-const DSProof = require('./dsproof')
 const Ecash = require('./ecash')
-
-// Indexers
-const Electrumx = require('./electrumx')
-const PsfSlpIndexer = require('./psf-slp-indexer')
 
 class XECJS {
   constructor (config) {
@@ -75,44 +59,22 @@ class XECJS {
       authToken: this.authToken
     }
 
-    // console.log(`apiToken: ${this.apiToken}`)
-
-    // ElectrumX indexer
-    this.Electrumx = new Electrumx(libConfig)
-
-    // Populate Full Node
-    this.Control = new Control(libConfig)
-    this.Mining = new Mining(libConfig)
-    this.RawTransactions = new RawTransactions(libConfig)
-
     // Populate utility functions
     this.Address = new Address(libConfig)
     this.BitcoinCash = new BitcoinCash(this.Address)
-    this.Blockchain = new Blockchain(libConfig)
-    this.Crypto = Crypto
     this.ECPair = ECPair
     this.ECPair.setAddress(this.Address)
-    this.encryption = new Encryption(libConfig)
-    this.Generating = new Generating(libConfig)
     this.HDNode = new HDNode(this.Address)
     this.Mnemonic = new Mnemonic(this.Address)
-    this.Price = new Price(libConfig)
     this.Script = new Script()
     this.TransactionBuilder = TransactionBuilder
     this.TransactionBuilder.setAddress(this.Address)
     this.Util = new Util(libConfig)
-    this.Schnorr = new Schnorr(libConfig)
 
     this.SLP = new SLP(libConfig)
     this.SLP.HDNode = this.HDNode
 
-    this.Utxo = new Utxo(libConfig)
-    this.Transaction = new Transaction(libConfig)
-
-    this.DSProof = new DSProof(libConfig)
     this.eCash = new Ecash()
-
-    this.PsfSlpIndexer = new PsfSlpIndexer(libConfig)
   }
 }
 

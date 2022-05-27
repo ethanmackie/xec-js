@@ -10,7 +10,7 @@ const axios = require('axios')
 if (!process.env.TEST) process.env.TEST = 'unit'
 // const SERVER = bchjs.restURL
 
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 const bchjs = new BCHJS()
 
 // Mock data used for unit tests

@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 // const SLP = require("../../src/slp/slp")
 // const SLP = new slp({ restURL: "http://fakeurl.com/" })
 let slp

@@ -1,7 +1,7 @@
 const fixtures = require('./fixtures/transaction-builder.json')
 const assert = require('assert')
 const assert2 = require('chai').assert
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 const bchjs = new BCHJS()
 const Buffer = require('safe-buffer').Buffer
 

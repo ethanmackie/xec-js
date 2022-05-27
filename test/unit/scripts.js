@@ -6,7 +6,7 @@ const Buffer = require('safe-buffer').Buffer
 const fixtures = require('./fixtures/script.json')
 
 // Unit under test (uut)
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 let bchjs
 
 describe('#Script', () => {

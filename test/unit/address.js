@@ -6,7 +6,7 @@ const Bitcoin = require('@psf/bitcoincashjs-lib')
 const fixtures = require('./fixtures/address.json')
 
 // Unit under test (uut)
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 let bchjs
 
 function flatten (arrays) {

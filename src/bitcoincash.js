@@ -180,7 +180,7 @@ class BitcoinCash {
    * // true
    */
   // verify message
-  verifyMessage (address, signature, message, messagePrefix='\u0018Bitcoin Signed Message:\n') {
+  verifyMessage (address, signature, message, messagePrefix = '\u0018Bitcoin Signed Message:\n') {
     return bitcoinMessage.verify(
       message,
       this._address.toLegacyAddress(address),

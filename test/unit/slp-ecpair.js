@@ -2,7 +2,7 @@ const assert = require('assert')
 
 const fixtures = require('./fixtures/slp/ecpair.json')
 
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 let slp
 
 // const SLP = require("../../src/slp/slp")

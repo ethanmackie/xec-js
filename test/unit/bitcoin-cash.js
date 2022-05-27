@@ -5,7 +5,7 @@ const assert = require('assert')
 const fixtures = require('./fixtures/bitcoincash.json')
 
 // Unit under test (uut)
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 // const bchjs = new BCHJS()
 let bchjs
 

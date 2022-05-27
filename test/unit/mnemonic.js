@@ -1,6 +1,6 @@
 const fixtures = require('./fixtures/mnemonic.json')
 const assert = require('assert')
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 const bchjs = new BCHJS()
 
 describe('#Mnemonic', () => {

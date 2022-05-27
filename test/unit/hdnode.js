@@ -7,7 +7,7 @@ const fixtures = require('./fixtures/hdnode.json')
 // const slpFixtures = require('./fixtures/slp/address.json')
 
 // Unit under test (uut)
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 let bchjs
 
 describe('#HDNode', () => {

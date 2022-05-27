@@ -7,7 +7,7 @@ const assert = require('chai').assert
 const sinon = require('sinon')
 // const cloneDeep = require('lodash.clonedeep')
 
-const BCHJS = require('../../src/bch-js')
+const BCHJS = require('../../src/xec-js')
 const bchjs = new BCHJS()
 
 // const mockDataLib = require('./fixtures/transaction-mock.js')
